@@ -37,7 +37,13 @@ struct MainView: View {
     
     private var apodList: some View {
         ForEach(viewModel.apodList) { apod in
-            FrontCardView(apodInfo: apod)
+            ZStack {
+                FrontCardView(apodInfo: apod, degree: $frontDegree)
+                BackCardView(apodInfo: apod, degree: $backDegree)
+            }.onTapGesture {
+                flipCard()
+            }
+            
         }
     }
     

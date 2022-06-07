@@ -12,6 +12,7 @@ struct FrontCardView: View {
     
     @StateObject var viewModel = APODViewModel()
     var apodInfo: APOD
+    @Binding var degree: Double
     var body: some View {
         ZStack {
             Rectangle()
@@ -43,7 +44,7 @@ struct FrontCardView: View {
                     .frame(width: 400, height: 300, alignment: .center)
             }
         }
-      //  .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
+        .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
     
     private var apodList: some View {
