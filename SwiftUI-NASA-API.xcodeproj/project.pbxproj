@@ -17,6 +17,7 @@
 		A747E980283A08E9009783D4 /* SwiftUI_NASA_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747E97F283A08E9009783D4 /* SwiftUI_NASA_APITests.swift */; };
 		A747E98A283A08EA009783D4 /* SwiftUI_NASA_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747E989283A08EA009783D4 /* SwiftUI_NASA_APIUITests.swift */; };
 		A747E98C283A08EA009783D4 /* SwiftUI_NASA_APIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747E98B283A08EA009783D4 /* SwiftUI_NASA_APIUITestsLaunchTests.swift */; };
+		A79C85D4284EB299005A16E6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79C85D3284EB299005A16E6 /* Endpoint.swift */; };
 		A7A7A59D283B5ED900317830 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A59C283B5ED900317830 /* Constants.swift */; };
 		A7A7A5A0283B5F7E00317830 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A59F283B5F7E00317830 /* APOD.swift */; };
 		A7A7A5A2283B6E7A00317830 /* NASAAPINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A5A1283B6E7A00317830 /* NASAAPINetwork.swift */; };
@@ -60,6 +61,7 @@
 		A747E985283A08EA009783D4 /* SwiftUI-NASA-APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-NASA-APIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A747E989283A08EA009783D4 /* SwiftUI_NASA_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_NASA_APIUITests.swift; sourceTree = "<group>"; };
 		A747E98B283A08EA009783D4 /* SwiftUI_NASA_APIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_NASA_APIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A79C85D3284EB299005A16E6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A7A7A59C283B5ED900317830 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A7A7A59F283B5F7E00317830 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		A7A7A5A1283B6E7A00317830 /* NASAAPINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPINetwork.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				A7A7A59C283B5ED900317830 /* Constants.swift */,
 				A7AA499F284A0CB20005E9F6 /* DateHelper.swift */,
+				A79C85D3284EB299005A16E6 /* Endpoint.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				A747E96F283A08E9009783D4 /* SwiftUI_NASA_APIApp.swift in Sources */,
 				A7AA49A0284A0CB20005E9F6 /* DateHelper.swift in Sources */,
 				A7A7A59D283B5ED900317830 /* Constants.swift in Sources */,
+				A79C85D4284EB299005A16E6 /* Endpoint.swift in Sources */,
 				A7A7A5A2283B6E7A00317830 /* NASAAPINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,15 +14,30 @@ struct MainView: View {
     @State var frontDegree = 0.0
     @State var backDegree = -90.0
     @State var isFlipped = false
+    @StateObject var viewModel = APODViewModel()
     let durationAndDelay : CGFloat = 0.5
     
     // MARK: View body
     var body: some View {
         ZStack {
-            FrontCardView(degree: $frontDegree)
-            BackCardView(degree: $backDegree)
-        }.onTapGesture {
-            flipCard()
+            VStack(alignment: .center) {
+                List {
+                    apodList
+                }
+                .listStyle(.plain)
+            }
+        }
+        .onAppear {
+            viewModel.fetchAPODList()
+        }
+//        .onTapGesture {
+//            flipCard()
+//        }
+    }
+    
+    private var apodList: some View {
+        ForEach(viewModel.apodList) { apod in
+            FrontCardView(apodInfo: apod)
         }
     }
     

@@ -17,7 +17,7 @@ class APODViewModel: ObservableObject {
     
     func fetchAPOD() {
         
-        let request = nasaNetwork.getEndpoint(urlString: Constants.apiURL + Constants.apiKey)
+        let request = Endpoint.today.request()
         
         nasaNetwork.fetchAPOD(request: request)
             .receive(on: DispatchQueue.main)
@@ -41,7 +41,7 @@ class APODViewModel: ObservableObject {
         let startDate = Date.getDate(forLastNDays: -7)
         let endDate = Date.getDate(forLastNDays: 0)
         
-        let request = nasaNetwork.getEndpoint(urlString: Constants.apiURL + Constants.apiKey + "&start_date=\(startDate)&end_date=\(endDate)")
+        let request = Endpoint.range(startDate: startDate, endDate: endDate).request()
         
         nasaNetwork.fetchAPODRange(request: request)
             .receive(on: DispatchQueue.main)
@@ -57,6 +57,7 @@ class APODViewModel: ObservableObject {
                 }, receiveValue: { [weak self] response in
                     guard let self = self else { return }
                     self.apodList = response.reversed()
+                    print(self.apodList)
                 })
             .store(in: &cancellable)
     }

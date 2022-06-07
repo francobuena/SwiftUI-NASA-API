@@ -34,5 +34,3 @@ class NASAApiNetwork: NASAServices {
             .eraseToAnyPublisher()
     }
 }
-
-//guard let url = URL(string: Constants.apiURL + Constants.apiKey + "&start_date=\(startDate)&end_date=\(endDate)") else { fatalError("Invalid URL") }

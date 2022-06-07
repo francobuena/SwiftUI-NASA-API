@@ -12,6 +12,12 @@ struct FrontCardRow: View {
     
     var apodInfo: APOD
     
+    let aspect: CGFloat = 0.95
+    let height: CGFloat = 350
+    var width: CGFloat {
+        height * aspect
+    }
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -37,7 +43,7 @@ struct FrontCardRow: View {
                 .padding([.leading, .trailing], 20)
                 .padding(.top, 10)
                 
-                WebImage(url: URL(string: apodInfo.imageURL ?? "https://images.app.goo.gl/rADoLKwtth13Msp66"))
+                WebImage(url: URL(string: apodInfo.url ?? "https://images.app.goo.gl/rADoLKwtth13Msp66"))
                     .resizable()
                     .transition(.fade(duration: 0.5))
                     .scaledToFit()

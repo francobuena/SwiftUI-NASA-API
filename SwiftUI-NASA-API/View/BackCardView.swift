@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BackCardView: View {
-    
+    var apodInfo: APOD
     @StateObject var viewModel = APODViewModel()
-    @Binding var degree: Double
+ //   @Binding var degree: Double
     
     var body: some View {
         ZStack {
@@ -21,7 +21,7 @@ struct BackCardView: View {
             
             VStack(alignment: .leading) {
                 ScrollView {
-                    Text(viewModel.apod?.explanation ?? "Long ass explanation here")
+                    Text(apodInfo.explanation ?? "Long ass explanation here")
                         .font(.body)
                         .multilineTextAlignment(.leading)
                         .padding(.horizontal, 20)
@@ -30,9 +30,9 @@ struct BackCardView: View {
             .frame(width: 400, height: 400, alignment: .center)
             .border(.gray)
         }
-        .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
-        .onAppear {
-            viewModel.fetchAPOD()
-        }
+     //   .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
+//        .onAppear {
+//            viewModel.fetchAPOD()
+//        }
     }
 }
