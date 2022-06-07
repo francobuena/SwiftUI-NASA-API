@@ -16,7 +16,6 @@ struct BackCardView: View {
         ZStack {
             Rectangle()
                 .fill(.white.opacity(1))
-                .frame(width: 400, height: 400, alignment: .center)
                 .border(.gray)
             
             VStack(alignment: .leading) {
@@ -27,12 +26,7 @@ struct BackCardView: View {
                         .padding(.horizontal, 20)
                 }.padding(.vertical, 10)
             }
-            .frame(width: 400, height: 400, alignment: .center)
-            .border(.gray)
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
-//        .onAppear {
-//            viewModel.fetchAPOD()
-//        }
     }
 }

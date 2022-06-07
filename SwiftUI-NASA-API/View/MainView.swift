@@ -19,29 +19,33 @@ struct MainView: View {
     
     // MARK: View body
     var body: some View {
-        ZStack {
-            VStack(alignment: .center) {
-                List {
-                    apodList
-                }
-                .listStyle(.plain)
+        NavigationView {
+            ScrollView {
+                apodList
+            }
+            .navigationTitle("APOD")
+            .onAppear {
+                viewModel.fetchAPODList()
             }
         }
-        .onAppear {
-            viewModel.fetchAPODList()
-        }
-//        .onTapGesture {
-//            flipCard()
-//        }
     }
     
     private var apodList: some View {
         // add id here to identify individual cells
         ForEach(viewModel.apodList) { apod in
             ZStack {
+                // inject these values inside the individual cards
+                //                @State var frontDegree = 0.0
+                //                @State var backDegree = -90.0
+                //                @State var isFlipped = false
+                // merge the two cards in one
+                //
                 FrontCardView(apodInfo: apod, degree: $frontDegree)
                 BackCardView(apodInfo: apod, degree: $backDegree)
-            }.onTapGesture {
+            }
+            .frame(height: 400)
+            .padding([.leading, .trailing], 16)
+            .onTapGesture {
                 flipCard()
             }
             

@@ -17,7 +17,6 @@ struct FrontCardView: View {
         ZStack {
             Rectangle()
                 .fill(.white.opacity(1))
-                .frame(width: 400, height: 400, alignment: .center)
                 .border(.gray)
             
             VStack(alignment: .leading) {
@@ -34,14 +33,18 @@ struct FrontCardView: View {
                             .foregroundColor(.secondary)
                     })
                 }
-                .padding([.leading, .trailing], 20)
-                .padding(.top, 10)
+                .padding([.leading, .trailing], 16)
                 
-                WebImage(url: URL(string: apodInfo.imageURL ?? "https://images.app.goo.gl/rADoLKwtth13Msp66"))
-                    .resizable()
-                    .transition(.fade(duration: 0.5))
-                    .aspectRatio(contentMode: .fit)
-                    .scaledToFit()
+                HStack {
+                    Spacer()
+                    WebImage(url: URL(string: apodInfo.imageURL ?? "https://images.app.goo.gl/rADoLKwtth13Msp66"))
+                        .resizable()
+                        .transition(.fade(duration: 0.5))
+                        .aspectRatio(contentMode: .fit)
+                        .scaledToFit()
+                    .padding(8.0)
+                    Spacer()
+                }
             }
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
