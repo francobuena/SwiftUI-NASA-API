@@ -36,6 +36,7 @@ struct MainView: View {
     }
     
     private var apodList: some View {
+        // add id here to identify individual cells
         ForEach(viewModel.apodList) { apod in
             ZStack {
                 FrontCardView(apodInfo: apod, degree: $frontDegree)

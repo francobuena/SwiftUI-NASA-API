@@ -40,8 +40,8 @@ struct FrontCardView: View {
                 WebImage(url: URL(string: apodInfo.imageURL ?? "https://images.app.goo.gl/rADoLKwtth13Msp66"))
                     .resizable()
                     .transition(.fade(duration: 0.5))
+                    .aspectRatio(contentMode: .fit)
                     .scaledToFit()
-                    .frame(width: 400, height: 300, alignment: .center)
             }
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
