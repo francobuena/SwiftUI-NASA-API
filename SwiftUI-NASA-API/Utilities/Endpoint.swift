@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum Endpoint {
     
     private struct Constants {
@@ -18,6 +17,7 @@ enum Endpoint {
     
     case today
     case random
+    case date(date: String)
     case range(startDate: String, endDate: String)
     
     private func path() -> String {
@@ -27,6 +27,8 @@ enum Endpoint {
             endpoint = ""
         case .random:
             endpoint = "&count=1"
+        case .date(let date):
+            endpoint = "&date=\(date)"
         case .range(let startDate, let endDate):
             endpoint = "&start_date=\(startDate)&end_date=\(endDate)"
         }

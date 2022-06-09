@@ -17,15 +17,16 @@
 		A747E980283A08E9009783D4 /* SwiftUI_NASA_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747E97F283A08E9009783D4 /* SwiftUI_NASA_APITests.swift */; };
 		A747E98A283A08EA009783D4 /* SwiftUI_NASA_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747E989283A08EA009783D4 /* SwiftUI_NASA_APIUITests.swift */; };
 		A747E98C283A08EA009783D4 /* SwiftUI_NASA_APIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747E98B283A08EA009783D4 /* SwiftUI_NASA_APIUITestsLaunchTests.swift */; };
+		A79326A5284F4732002848B9 /* FlippableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79326A4284F4732002848B9 /* FlippableCardView.swift */; };
 		A79C85D4284EB299005A16E6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79C85D3284EB299005A16E6 /* Endpoint.swift */; };
 		A7A7A59D283B5ED900317830 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A59C283B5ED900317830 /* Constants.swift */; };
 		A7A7A5A0283B5F7E00317830 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A59F283B5F7E00317830 /* APOD.swift */; };
 		A7A7A5A2283B6E7A00317830 /* NASAAPINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A5A1283B6E7A00317830 /* NASAAPINetwork.swift */; };
 		A7A7A5A5283B707300317830 /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A5A4283B707300317830 /* APODViewModel.swift */; };
 		A7AA49A0284A0CB20005E9F6 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA499F284A0CB20005E9F6 /* DateHelper.swift */; };
-		A7AA49A3284A1AAD0005E9F6 /* FrontCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA49A2284A1AAD0005E9F6 /* FrontCardRow.swift */; };
 		A7B3BE9728481F1F00B03D2E /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3BE9628481F1F00B03D2E /* FrontCardView.swift */; };
 		A7B3BE9928481F9400B03D2E /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3BE9828481F9400B03D2E /* BackCardView.swift */; };
+		A7B6D0D42851546A002E207A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6D0D32851546A002E207A /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,15 +62,16 @@
 		A747E985283A08EA009783D4 /* SwiftUI-NASA-APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-NASA-APIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A747E989283A08EA009783D4 /* SwiftUI_NASA_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_NASA_APIUITests.swift; sourceTree = "<group>"; };
 		A747E98B283A08EA009783D4 /* SwiftUI_NASA_APIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_NASA_APIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A79326A4284F4732002848B9 /* FlippableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableCardView.swift; sourceTree = "<group>"; };
 		A79C85D3284EB299005A16E6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A7A7A59C283B5ED900317830 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A7A7A59F283B5F7E00317830 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		A7A7A5A1283B6E7A00317830 /* NASAAPINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPINetwork.swift; sourceTree = "<group>"; };
 		A7A7A5A4283B707300317830 /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
 		A7AA499F284A0CB20005E9F6 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
-		A7AA49A2284A1AAD0005E9F6 /* FrontCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardRow.swift; sourceTree = "<group>"; };
 		A7B3BE9628481F1F00B03D2E /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		A7B3BE9828481F9400B03D2E /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		A7B6D0D32851546A002E207A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A92E42D239A4E45EE7577115 /* Pods_SwiftUI_NASA_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_NASA_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB516998232C3BF87C55094B /* Pods-SwiftUI-NASA-APITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-NASA-APITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-NASA-APITests/Pods-SwiftUI-NASA-APITests.release.xcconfig"; sourceTree = "<group>"; };
 		D72FC55372787487817FCC59 /* Pods_SwiftUI_NASA_API_SwiftUI_NASA_APIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_NASA_API_SwiftUI_NASA_APIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,7 +229,10 @@
 		A7AA49A1284A1A990005E9F6 /* ReusableUIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				A7AA49A2284A1AAD0005E9F6 /* FrontCardRow.swift */,
+				A7B6D0D32851546A002E207A /* LoadingView.swift */,
+				A7B3BE9628481F1F00B03D2E /* FrontCardView.swift */,
+				A7B3BE9828481F9400B03D2E /* BackCardView.swift */,
+				A79326A4284F4732002848B9 /* FlippableCardView.swift */,
 			);
 			path = ReusableUIComponents;
 			sourceTree = "<group>";
@@ -236,8 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				A747E970283A08E9009783D4 /* MainView.swift */,
-				A7B3BE9628481F1F00B03D2E /* FrontCardView.swift */,
-				A7B3BE9828481F9400B03D2E /* BackCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,8 +483,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7AA49A3284A1AAD0005E9F6 /* FrontCardRow.swift in Sources */,
 				A7B3BE9728481F1F00B03D2E /* FrontCardView.swift in Sources */,
+				A79326A5284F4732002848B9 /* FlippableCardView.swift in Sources */,
 				A747E971283A08E9009783D4 /* MainView.swift in Sources */,
 				A7A7A5A0283B5F7E00317830 /* APOD.swift in Sources */,
 				A7B3BE9928481F9400B03D2E /* BackCardView.swift in Sources */,
@@ -490,6 +493,7 @@
 				A7AA49A0284A0CB20005E9F6 /* DateHelper.swift in Sources */,
 				A7A7A59D283B5ED900317830 /* Constants.swift in Sources */,
 				A79C85D4284EB299005A16E6 /* Endpoint.swift in Sources */,
+				A7B6D0D42851546A002E207A /* LoadingView.swift in Sources */,
 				A7A7A5A2283B6E7A00317830 /* NASAAPINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -50,10 +50,4 @@ struct FrontCardView: View {
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
     
-    private var apodList: some View {
-        ForEach(viewModel.apodList) { apod in
-            FrontCardRow(apodInfo: apod)
-        }
-    }
-    
 }
