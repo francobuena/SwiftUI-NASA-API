@@ -22,7 +22,7 @@ struct FlippableCardView: View {
             BackCardView(apodInfo: apodInfo, degree: $backDegree)
             FrontCardView(apodInfo: apodInfo, degree: $frontDegree)
         }
-        .frame(height: 400)
+        .frame(height: 350)
         .padding([.leading, .trailing], 16)
         .onTapGesture {
             flipCard()
@@ -34,17 +34,17 @@ struct FlippableCardView: View {
         isFlipped = !isFlipped
         if isFlipped {
             withAnimation(.linear(duration: durationAndDelay)) {
-                backDegree = 90
-            }
-            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-                frontDegree = 0
-            }
-        } else {
-            withAnimation(.linear(duration: durationAndDelay)) {
                 frontDegree = -90
             }
             withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
                 backDegree = 0
+            }
+        } else {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                backDegree = 90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                frontDegree = 0
             }
         }
     }

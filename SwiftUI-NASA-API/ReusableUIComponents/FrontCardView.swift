@@ -37,7 +37,7 @@ struct FrontCardView: View {
                 
                 HStack {
                     Spacer()
-                    WebImage(url: URL(string: apodInfo.imageURL ?? "https://images.app.goo.gl/rADoLKwtth13Msp66"))
+                    WebImage(url: URL(string: apodInfo.imageURL ?? "https://images.app.goo.gl/mFPJnYREJG3oQqbm6"))
                         .resizable()
                         .transition(.fade(duration: 0.5))
                         .aspectRatio(contentMode: .fit)

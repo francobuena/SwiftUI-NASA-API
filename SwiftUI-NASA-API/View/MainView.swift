@@ -17,8 +17,25 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                ScrollView {
-                    apodList
+                VStack {
+                    HStack {
+                        Picker("Request type", selection: $viewModel.currentRequest) {
+                            ForEach(RequestType.allCases, id: \.self) {
+                                Text($0.description)
+                            }
+                        }
+                        .onChange(of: viewModel.currentRequest) { newValue in
+                            viewModel.fetchAPODList()
+                        }
+                        .padding(.leading, 20)
+                        .pickerStyle(.menu)
+                        
+                        Spacer()
+                    }
+                    
+                    ScrollView {
+                        cardList
+                    }
                 }
                 if viewModel.isLoading {
                     LoadingView()
@@ -34,15 +51,12 @@ struct MainView: View {
             } message: {
                 Text(viewModel.errorText)
             }
-
         }
     }
     
-    private var apodList: some View {
-        // add id here to identify individual cells
+    private var cardList: some View {
         ForEach(viewModel.apodList) { apod in
             FlippableCardView(apodInfo: apod)
         }
     }
 }
-
