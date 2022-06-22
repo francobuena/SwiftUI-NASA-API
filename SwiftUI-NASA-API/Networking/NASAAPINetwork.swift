@@ -9,22 +9,12 @@ import Foundation
 import Combine
 
 protocol NASAServices {
-    func fetchAPOD(request: URLRequest) -> AnyPublisher<APOD, Error>
     func fetchAPODRange(request: URLRequest) -> AnyPublisher<[APOD], Error>
 }
 
 class NASAApiNetwork: NASAServices {
-    func fetchAPOD(request: URLRequest) -> AnyPublisher<APOD, Error> {
-        return fetchRequest(with: request)
-    }
-    
     func fetchAPODRange(request: URLRequest) -> AnyPublisher<[APOD], Error> {
         return fetchRequest(with: request)
-    }
-    
-    func getEndpoint(urlString: String) -> URLRequest {
-        guard let url = URL(string: urlString) else { fatalError("Invalid URL") }
-        return URLRequest(url: url)
     }
     
     private func fetchRequest<T: Decodable>(with request: URLRequest) -> AnyPublisher<T, Error> {

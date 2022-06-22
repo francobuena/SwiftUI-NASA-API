@@ -9,12 +9,12 @@ import Foundation
 
 public enum RequestType: CaseIterable, Hashable {
     public static var allCases: [RequestType] {
-        return [.lastWeek, .randomImage, .pickADate("")]
+        return [.lastWeek, .randomImage, .pickADate]
     }
     
     case lastWeek
     case randomImage
-    case pickADate(String)
+    case pickADate
     
     var description: String {
         switch self {

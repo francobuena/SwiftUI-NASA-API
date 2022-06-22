@@ -1,5 +1,5 @@
 //
-//  Endpoint.swift
+//  NASAEndpoint.swift
 //  SwiftUI-NASA-API
 //
 //  Created by Buena, Franco on 7/6/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Endpoint {
+enum NASAEndpoint {
     
     private struct Constants {
         static let baseURL = "https://api.nasa.gov/planetary/apod"
@@ -40,7 +40,6 @@ enum Endpoint {
         guard let url = URL(string: "\(Constants.baseURL)\(Constants.apiKey)\(Constants.thumbs)\(path())") else {
             fatalError("Invalid url")
         }
-        
         return URLRequest(url: url)
     }
 }

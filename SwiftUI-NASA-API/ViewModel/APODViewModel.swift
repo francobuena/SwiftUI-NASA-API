@@ -15,6 +15,7 @@ class APODViewModel: ObservableObject {
     @Published var showAlert: Bool = false
     @Published var currentRequest: RequestType = .lastWeek
     var errorText = "Unknown error"
+    var currentDate = Date.getDate(forLastNDays: -8)
     private let nasaNetwork = NASAApiNetwork()
     private var cancellable = Set<AnyCancellable>()
     // NASA Api is a day behind AUS so I must fetch from the day before
@@ -27,11 +28,11 @@ class APODViewModel: ObservableObject {
         
         switch currentRequest {
         case .lastWeek:
-            request = Endpoint.range(startDate: startDate, endDate: endDate).request()
+            request = NASAEndpoint.range(startDate: startDate, endDate: endDate).request()
         case .randomImage:
-            request = Endpoint.random.request()
-        case .pickADate(let date):
-            request = Endpoint.date(date: date).request()
+            request = NASAEndpoint.random.request()
+        case .pickADate:
+            request = NASAEndpoint.date(date: "2021-01-01").request()
         }
         
         self.isLoading = true
@@ -52,7 +53,6 @@ class APODViewModel: ObservableObject {
                     guard let self = self else { return }
                     self.isLoading = false
                     self.apodList = response.reversed()
-                    print(self.apodList)
                 })
             .store(in: &cancellable)
     }
